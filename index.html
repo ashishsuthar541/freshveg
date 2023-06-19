@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <title>FreshVeg</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <!-- <h1>FreshVeg</h1> -->
+            <img src="FreshVeglogo2.png" alt="">
+        </div>
+        <div class="button">
+            <a href=""><button>LogIn</button></a>
+        </div>
+    </nav>
+    <div class="nav">
+        <div class="navi">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="#Category">Category</a>
+            <a href="#offer">Offers</a>
+            <a href="cart.html">Cart</a>
+        </div>
+        <div class="srch">
+            <input type="search" name="" id="">
+            <button><ion-icon name="search-outline"></ion-icon></button>
+        </div>
+    </div>
+    <div class="offer">
+        <marquee behavior="" direction="">80% off In veg</marquee>
+    </div>
+    <div class="con-1">
+        <h1>"Unlimtited Offers ke saath Premium Quality."</h1>    
+    </div>
+
+    <div class="categories" id="Category">
+        <h2>Shop & Category</h2>
+        <div class="cate">
+            <a href=""><div class="box-cate" id="fresh-fruits"></div></a>
+            <a href=""><div class="box-cate" id="fresh-mango"></div></a>
+            <a href=""><div class="box-cate" id="fresh-vegitable"></div></a>
+            <a href=""> <div class="box-cate" id="grocery"></div></a>
+            <a href=""><div class="box-cate" id="super-saver"></div></a>
+        </div>
+    </div>
+
+    <svg class="con-1-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#6ad148" fill-opacity="1" d="M0,192L80,208C160,224,320,256,480,240C640,224,800,160,960,138.7C1120,117,1280,139,1360,149.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+
+    <div class="deals" id="offer">
+        <h2>Deal of the Day</h2>
+
+        <div class="dealing">
+            <div class="dealing">
+                <div class="deal">
+                    <img class="box" src="/FreshVegImg/potato.jpeg" alt="Product 1">
+                    <div class="text">
+                        <h3>Potato (980g- 1020g)</h3>
+                        <h5>1 Pack</h5>
+                        <p class="line-through">$20</p>
+                        <p>$10</p>
+                        <button onclick="addToCart('Potato (980g- 1020g)', 10)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="deal">
+                    <img class="box" src="/FreshVegImg/onion.jpeg" alt="Product 1">
+                    <div class="text">
+                        <h3>Onion</h3>
+                        <h5>1 Pack</h5>
+                        <p>$5</p>
+                        <button onclick="addToCart('Onion', 5)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="deal">
+                    <img class="box" src="/FreshVegImg/tomato.jpeg" alt="Product 1">
+                    <div class="text">
+                        <h3>Desi Tomato (980g- 1020g)</h3>
+                        <h5>1 Pack</h5>
+                        <p>$50</p>
+                        <button onclick="addToCart('Desi Tomato', 50)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="deal">
+                    <img class="box" src="/FreshVegImg/marksmelow.jpeg" alt="Product 1">
+                    <div class="text">
+                        <h3>Muskmeion Madhu (980g- 1020g)</h3>
+                        <h5>1 Pack</h5>
+                        <p>$10</p>
+                        <button onclick="addToCart('Muskmeion Madhu', 10)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="deal">
+                    <img class="box" src="/FreshVegImg/watermelon.jpeg" alt="Product 1">
+                    <div class="text">
+                        <h3>Watermelon (Medium size)</h3>
+                        <h5>1 Pack</h5>
+                        <p>$10</p>
+                        <button onclick="addToCart('Watermelon (Medium size)', 10)">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="deal">
+                    <img class="box" src="/FreshVegImg/AdobeStock_68105885_Preview.jpeg" alt="Product 1">
+                    <div class="text">
+                        <h3>Desi Cauliflower</h3>
+                        <h5>1 Pack</h5>
+                        <p>$20</p>
+                        <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="cart" id="cart">
+            <div class="close" id="close">
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+            <h2>Cart</h2>
+            <ul id="cart-items"></ul>
+            <h3>Total: <span id="cart-total">$0</span></h3>
+            <a href=""><button>Order</button></a>
+        </div>
+    </div>
+
+    <div class="con-2">
+        <h2>Offer Products For You</h2>
+        <div class="con2">
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="con-2">
+        <h2>Fresh Veggies</h2>
+        <div class="con2">
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="con-2">
+        <h2>Seasonal Fruits</h2>
+        <div class="con2">
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="con-2">
+        <h2>Juicy Mango</h2>
+        <div class="con2">
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="con-box">
+                <div class="box"></div>
+                <div class="text">
+                    <h3>Desi Cauliflower</h3>
+                    <h5>1 Pack</h5>
+                    <p>$20</p>
+                    <button onclick="addToCart('Desi Cauliflower', 20)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<footer>
+        <div class="contact foty">
+            <h2>Contact Us</h2>
+            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+            <span>Support@vegease.in</span><br>
+            <span class="icon"><ion-icon name="phone-portrait-outline"></ion-icon></span>
+            <span>+91 7206541108</span><br>
+            <span class="icon"><ion-icon name="location-outline"></ion-icon></span>
+            <span>5th Floor, 362-363, Rao Gajraj Singh Marg, Phase IV, Udyog Vihar, Sector 18, Gurugram, Haryana 122016</span>
+        </div>
+        <div class="company foty">
+            <h2>Company</h2>
+            <li><a href="">About</a></li>
+            <li><a href="">Media Coverage</a></li>
+        </div>
+        <div class="foryou foty">
+            <h2>For You</h2>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms And Conditions</a></li>
+            <div class="icons">
+                <span class="icon"><ion-icon name="logo-facebook"></ion-icon></span>
+                <span class="icon"><ion-icon name="logo-twitter"></ion-icon></span>
+                <span class="icon"><ion-icon name="logo-youtube"></ion-icon></span>
+                <span class="icon"><ion-icon name="logo-instagram"></ion-icon></span>
+                <span class="icon"><ion-icon name="logo-linkedin"></ion-icon></span>
+            </div>
+        </div>
+        <div class="location foty">
+            <h2>Location</h2>
+            <li>Dwarja</li>
+            <li>Gurgaon</li>
+            <li>Noida</li>
+            <p>&copy  VegEase. Powered by Egreen, India. All rights reserved</p>
+        </div>
+</footer>
+
+
+
+    <script>
+        const button = document.getElementById('close');
+        const cart = document.getElementById('cart');
+        const cartItemsList = document.getElementById('cart-items');
+        const cartTotalElement = document.getElementById('cart-total');
+
+        button.addEventListener('click', () => {
+            cart.classList.toggle('active'); /* Toggle active class */
+        });
+
+        var cartItems = [];
+        var cartTotal = 0;
+
+        function addToCart(productName, price) {
+            var cartItem = {
+                name: productName,
+                price: price
+            };
+
+            cartItems.push(cartItem);
+            cartTotal += price;
+
+            displayCartItems();
+            displayCartTotal();
+            saveCartData();
+        }
+
+        function removeFromCart(index) {
+            var removedItem = cartItems.splice(index, 1)[0];
+            cartTotal -= removedItem.price;
+            displayCartItems();
+            displayCartTotal();
+            saveCartData();
+        }
+
+        function displayCartItems() {
+            cartItemsList.innerHTML = '';
+
+            cartItems.forEach(function(item, index) {
+                var li = document.createElement('li');
+                li.innerText = item.name + ' - $' + item.price;
+                var deleteButton = document.createElement('button');
+                deleteButton.innerText = 'Delete';
+                deleteButton.addEventListener('click', function() {
+                    removeFromCart(index);
+                });
+                li.appendChild(deleteButton);
+                cartItemsList.appendChild(li);
+            });
+        }
+
+        function displayCartTotal() {
+            cartTotalElement.innerText = '$' + cartTotal;
+        }
+
+        function saveCartData() {
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            localStorage.setItem('cartTotal', cartTotal.toString());
+        }
+
+        // Retrieve cart data from local storage, if available
+        var storedCartItems = localStorage.getItem('cartItems');
+        var storedCartTotal = localStorage.getItem('cartTotal');
+
+        cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
+        cartTotal = storedCartTotal ? parseFloat(storedCartTotal) : 0;
+
+        displayCartItems();
+        displayCartTotal();
+
+        // Clear cart data and local storage
+        function clearCart() {
+            cartItems = [];
+            cartTotal = 0;
+            localStorage.removeItem('cartItems');
+            localStorage.removeItem('cartTotal');
+            displayCartItems();
+            displayCartTotal();
+        }
+        // Add a delete button for each cart item in the displayCartItems() function:
+        function displayCartItems() {
+    cartItemsList.innerHTML = '';
+
+    cartItems.forEach(function(item, index) {
+        var li = document.createElement('li');
+        li.innerText = item.name + ' - $' + item.price;
+
+        // Create a delete button for each cart item
+        var deleteButton = document.createElement('button');
+        deleteButton.innerText = 'Delete';
+        deleteButton.addEventListener('click', function() {
+            removeCartItem(index);
+        });
+
+        li.appendChild(deleteButton);
+
+        cartItemsList.appendChild(li);
+    });
+}
+
+// Implement the removeCartItem() function to remove the selected item from the cart:
+function removeCartItem(index) {
+    var removedItem = cartItems.splice(index, 1)[0];
+    cartTotal -= removedItem.price;
+
+    displayCartItems();
+    displayCartTotal();
+    saveCartData();
+}
+
+
+    </script>
+</body>
+</html>
